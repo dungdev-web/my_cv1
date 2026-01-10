@@ -109,6 +109,14 @@
         >
       </div>
     </div>
+    <!-- button to top -->
+    <button class="button" id="backToTop">
+      <svg class="svgIcon" viewBox="0 0 384 512">
+        <path
+          d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
+        ></path>
+      </svg>
+    </button>
 
     <!-- Hero Section -->
     <section
@@ -135,7 +143,8 @@
         </div>
 
         <h1 class="text-4xl sm:text-6xl md:text-7xl font-black mb-4">
-          Xin chào, mình là <span class="gradient-text">Lưu Đức Dũng</span>
+          Xin chào, mình là <span class="gradient-text" id="type-text"></span
+          ><span class="cursor">|</span>
         </h1>
         <p class="text-lg sm:text-xl md:text-2xl text-gray-400 mb-4">
           Sinh viên đã tốt nghiệp ngành Công nghệ Thông tin
@@ -154,11 +163,13 @@
           >
             Xem dự án của mình
           </a>
-          <a
-            href="#contact"
-            class="px-6 sm:px-8 py-3 border-2 border-purple-600 rounded-full font-semibold hover:bg-purple-600 transition"
-          >
-            Liên hệ với mình
+          <a href="#contact">
+            <button
+              class="bubbles px-6 sm:px-8 py-3 font-semibold"
+              style="width: 100%"
+            >
+              <span class="text"> Liên hệ với mình</span>
+            </button>
           </a>
         </div>
         <div class="flex justify-center gap-4 text-sm text-gray-400">
@@ -260,7 +271,7 @@
     <section id="education" class="py-20 sm:py-32 px-4 sm:px-6 lg:px-8">
       <div class="max-w-6xl mx-auto">
         <h2 class="text-4xl sm:text-5xl font-black mb-12 text-center">
-          Học Vấn & <span class="gradient-text">Chứng Chỉ</span>
+          Học Vấn & <span class="gradient-text">Hoạt động</span>
         </h2>
 
         <div class="grid md:grid-cols-2 gap-8 mb-12">
@@ -311,10 +322,32 @@
 
           <div>
             <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
-              <span><i class="fa-solid fa-trophy"></i></span>
-              <span>Chứng chỉ</span>
+              <span><i class="fa-solid fa-users"></i></span>
+              <span>Hoạt động trên trường</span>
             </h3>
+
             <div class="grid gap-4">
+              <div
+                class="certificate-card bg-slate-800 rounded-xl p-4 card-hover"
+              >
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center text-2xl flex-shrink-0"
+                  >
+                    <i class="fa-solid fa-laptop-code"></i>
+                  </div>
+                  <div class="flex-1">
+                    <h4 class="font-bold text-sm">Đồ án Web bán hàng</h4>
+                    <p class="text-xs text-gray-400">
+                      Môn Lập trình Web • 2024
+                    </p>
+                    <p class="text-xs text-gray-500">
+                      Xây dựng website bán hàng với React + Node.js + MySQL
+                    </p>
+                  </div>
+                </div>
+              </div>
+
               <div
                 class="certificate-card bg-slate-800 rounded-xl p-4 card-hover"
               >
@@ -322,44 +355,15 @@
                   <div
                     class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center text-2xl flex-shrink-0"
                   >
-                    <i class="fa-solid fa-scroll"></i>
+                    <i class="fa-solid fa-code"></i>
                   </div>
                   <div class="flex-1">
-                    <h4 class="font-bold text-sm">Responsive Web Design</h4>
-                    <p class="text-xs text-gray-400">freeCodeCamp • 2024</p>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="certificate-card bg-slate-800 rounded-xl p-4 card-hover"
-              >
-                <div class="flex items-center gap-3">
-                  <div
-                    class="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center text-2xl flex-shrink-0"
-                  >
-                    <i class="fa-solid fa-scroll"></i>
-                  </div>
-                  <div class="flex-1">
-                    <h4 class="font-bold text-sm">JavaScript Algorithms</h4>
-                    <p class="text-xs text-gray-400">freeCodeCamp • 2024</p>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="certificate-card bg-slate-800 rounded-xl p-4 card-hover"
-              >
-                <div class="flex items-center gap-3">
-                  <div
-                    class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center text-2xl flex-shrink-0"
-                  >
-                    <i class="fa-solid fa-scroll"></i>
-                  </div>
-                  <div class="flex-1">
-                    <h4 class="font-bold text-sm">Git & GitHub Essential</h4>
+                    <h4 class="font-bold text-sm">Đồ án React Frontend</h4>
                     <p class="text-xs text-gray-400">
-                      LinkedIn Learning • 2023
+                      Môn Lập trình Frontend • 2024
+                    </p>
+                    <p class="text-xs text-gray-500">
+                      Làm website blog cá nhân, call API, responsive
                     </p>
                   </div>
                 </div>
@@ -372,13 +376,36 @@
                   <div
                     class="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center text-2xl flex-shrink-0"
                   >
-                    <i class="fa-solid fa-scroll"></i>
+                    <i class="fa-solid fa-database"></i>
                   </div>
                   <div class="flex-1">
-                    <h4 class="font-bold text-sm">
-                      React Developer Certificate
-                    </h4>
-                    <p class="text-xs text-gray-400">Udemy • 2024</p>
+                    <h4 class="font-bold text-sm">Đồ án Cơ sở dữ liệu</h4>
+                    <p class="text-xs text-gray-400">Môn CSDL • 2023</p>
+                    <p class="text-xs text-gray-500">
+                      Thiết kế database, viết query, làm hệ thống quản lý sinh
+                      viên
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="certificate-card bg-slate-800 rounded-xl p-4 card-hover"
+              >
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center text-2xl flex-shrink-0"
+                  >
+                    <i class="fa-solid fa-users"></i>
+                  </div>
+                  <div class="flex-1">
+                    <h4 class="font-bold text-sm">Làm việc nhóm đồ án</h4>
+                    <p class="text-xs text-gray-400">
+                      Nhiều môn học • 2022–2024
+                    </p>
+                    <p class="text-xs text-gray-500">
+                      Phân chia task, teamwork, dùng GitHub để quản lý source
+                    </p>
                   </div>
                 </div>
               </div>
@@ -613,297 +640,316 @@
           Các dự án học tập và cá nhân giúp mình rèn luyện kỹ năng lập trình và
           áp dụng kiến thức đã học
         </p>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          <div
-            class="project-card bg-slate-800 rounded-2xl overflow-hidden card-hover glow-effect"
+        <div class="flex justify-end gap-3 mb-6">
+          <button
+            id="projPrev"
+            class="px-4 py-2 rounded-full bg-slate-700 hover:bg-slate-600"
           >
-            <div
-              class="h-40 bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center text-5xl"
-            >
-              📝
-            </div>
-            <div class="p-6">
-              <div class="flex items-center gap-2 mb-3">
-                <h3 class="text-xl font-bold">Todo App</h3>
-                <span
-                  class="text-xs px-2 py-1 bg-green-600/20 text-green-400 rounded"
-                  >Hoàn thành</span
-                >
-              </div>
-              <p class="text-sm text-gray-400 mb-4">
-                Ứng dụng quản lý công việc với các tính năng thêm, xóa, sửa
-                task. Responsive design và lưu trữ dữ liệu local.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span
-                  class="text-xs px-2 py-1 bg-orange-600/20 text-orange-400 rounded"
-                  >HTML</span
-                >
-                <span
-                  class="text-xs px-2 py-1 bg-blue-600/20 text-blue-400 rounded"
-                  >CSS</span
-                >
-                <span
-                  class="text-xs px-2 py-1 bg-yellow-600/20 text-yellow-400 rounded"
-                  >JavaScript</span
-                >
-              </div>
-              <div class="flex gap-3 text-sm">
-                <a
-                  href="#"
-                  class="text-purple-400 hover:text-purple-300 flex items-center gap-1"
-                  >Demo</a
-                >
-                <a
-                  href="#"
-                  class="text-gray-400 hover:text-gray-300 flex items-center gap-1"
-                  >Code</a
-                >
-              </div>
-            </div>
-          </div>
+            ‹
+          </button>
+          <button
+            id="projNext"
+            class="px-4 py-2 rounded-full bg-slate-700 hover:bg-slate-600"
+          >
+            ›
+          </button>
+        </div>
 
+        <div class="projects-slider overflow-hidden relative">
           <div
-            class="project-card bg-slate-800 rounded-2xl overflow-hidden card-hover glow-effect"
+            class="projects-track flex gap-0 sm:gap-5 transition-transform duration-500 ease-in-out"
           >
             <div
-              class="h-40 bg-gradient-to-br from-pink-600 to-orange-600 flex items-center justify-center text-5xl"
+              class="project-card min-w-full sm:min-w-[50%] lg:min-w-[calc(100%/3)] bg-slate-800 rounded-2xl overflow-hidden card-hover glow-effect"
             >
-              🌦️
+              <div
+                class="h-40 bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center text-5xl"
+              >
+                📝
+              </div>
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-3">
+                  <h3 class="text-xl font-bold">Todo App</h3>
+                  <span
+                    class="text-xs px-2 py-1 bg-green-600/20 text-green-400 rounded"
+                    >Hoàn thành</span
+                  >
+                </div>
+                <p class="text-sm text-gray-400 mb-4">
+                  Ứng dụng quản lý công việc với các tính năng thêm, xóa, sửa
+                  task. Responsive design và lưu trữ dữ liệu local.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="text-xs px-2 py-1 bg-orange-600/20 text-orange-400 rounded"
+                    >HTML</span
+                  >
+                  <span
+                    class="text-xs px-2 py-1 bg-blue-600/20 text-blue-400 rounded"
+                    >CSS</span
+                  >
+                  <span
+                    class="text-xs px-2 py-1 bg-yellow-600/20 text-yellow-400 rounded"
+                    >JavaScript</span
+                  >
+                </div>
+                <div class="flex gap-3 text-sm">
+                  <a
+                    href="#"
+                    class="text-purple-400 hover:text-purple-300 flex items-center gap-1"
+                    >Demo</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-gray-300 flex items-center gap-1"
+                    >Code</a
+                  >
+                </div>
+              </div>
             </div>
-            <div class="p-6">
-              <div class="flex items-center gap-2 mb-3">
-                <h3 class="text-xl font-bold">Weather App</h3>
-                <span
-                  class="text-xs px-2 py-1 bg-green-600/20 text-green-400 rounded"
-                  >Hoàn thành</span
-                >
-              </div>
-              <p class="text-sm text-gray-400 mb-4">
-                Ứng dụng xem thời tiết sử dụng API, hiển thị thông tin thời tiết
-                chi tiết theo thành phố.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span
-                  class="text-xs px-2 py-1 bg-cyan-600/20 text-cyan-400 rounded"
-                  >React</span
-                >
-                <span
-                  class="text-xs px-2 py-1 bg-purple-600/20 text-purple-400 rounded"
-                  >Tailwind</span
-                >
-                <span
-                  class="text-xs px-2 py-1 bg-blue-600/20 text-blue-400 rounded"
-                  >API</span
-                >
-              </div>
-              <div class="flex gap-3 text-sm">
-                <a
-                  href="#"
-                  class="text-purple-400 hover:text-purple-300 flex items-center gap-1"
-                  >Demo</a
-                >
-                <a
-                  href="#"
-                  class="text-gray-400 hover:text-gray-300 flex items-center gap-1"
-                  >Code</a
-                >
-              </div>
-            </div>
-          </div>
 
-          <div
-            class="project-card bg-slate-800 rounded-2xl overflow-hidden card-hover glow-effect"
-          >
             <div
-              class="h-40 bg-gradient-to-br from-green-600 to-teal-600 flex items-center justify-center text-5xl"
+              class="project-card min-w-full sm:min-w-[50%] lg:min-w-[calc(100%/3)] bg-slate-800 rounded-2xl overflow-hidden card-hover glow-effect"
             >
-              💰
+              <div
+                class="h-40 bg-gradient-to-br from-pink-600 to-orange-600 flex items-center justify-center text-5xl"
+              >
+                🌦️
+              </div>
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-3">
+                  <h3 class="text-xl font-bold">Weather App</h3>
+                  <span
+                    class="text-xs px-2 py-1 bg-green-600/20 text-green-400 rounded"
+                    >Hoàn thành</span
+                  >
+                </div>
+                <p class="text-sm text-gray-400 mb-4">
+                  Ứng dụng xem thời tiết sử dụng API, hiển thị thông tin thời
+                  tiết chi tiết theo thành phố.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="text-xs px-2 py-1 bg-cyan-600/20 text-cyan-400 rounded"
+                    >React</span
+                  >
+                  <span
+                    class="text-xs px-2 py-1 bg-purple-600/20 text-purple-400 rounded"
+                    >Tailwind</span
+                  >
+                  <span
+                    class="text-xs px-2 py-1 bg-blue-600/20 text-blue-400 rounded"
+                    >API</span
+                  >
+                </div>
+                <div class="flex gap-3 text-sm">
+                  <a
+                    href="#"
+                    class="text-purple-400 hover:text-purple-300 flex items-center gap-1"
+                    >Demo</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-gray-300 flex items-center gap-1"
+                    >Code</a
+                  >
+                </div>
+              </div>
             </div>
-            <div class="p-6">
-              <div class="flex items-center gap-2 mb-3">
-                <h3 class="text-xl font-bold">Budget Tracker</h3>
-                <span
-                  class="text-xs px-2 py-1 bg-yellow-600/20 text-yellow-400 rounded"
-                  >Đang làm</span
-                >
-              </div>
-              <p class="text-sm text-gray-400 mb-4">
-                Ứng dụng quản lý chi tiêu cá nhân với biểu đồ thống kê, phân
-                loại thu chi.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span
-                  class="text-xs px-2 py-1 bg-cyan-600/20 text-cyan-400 rounded"
-                  >React</span
-                >
-                <span
-                  class="text-xs px-2 py-1 bg-green-600/20 text-green-400 rounded"
-                  >Node.js</span
-                >
-                <span
-                  class="text-xs px-2 py-1 bg-emerald-600/20 text-emerald-400 rounded"
-                  >MongoDB</span
-                >
-              </div>
-              <div class="flex gap-3 text-sm">
-                <a
-                  href="#"
-                  class="text-purple-400 hover:text-purple-300 flex items-center gap-1"
-                  >Demo</a
-                >
-                <a
-                  href="#"
-                  class="text-gray-400 hover:text-gray-300 flex items-center gap-1"
-                  >Code</a
-                >
-              </div>
-            </div>
-          </div>
 
-          <div
-            class="project-card bg-slate-800 rounded-2xl overflow-hidden card-hover glow-effect"
-          >
             <div
-              class="h-40 bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center text-5xl"
+              class="project-card min-w-full sm:min-w-[50%] lg:min-w-[calc(100%/3)] bg-slate-800 rounded-2xl overflow-hidden card-hover glow-effect"
             >
-              🎮
+              <div
+                class="h-40 bg-gradient-to-br from-green-600 to-teal-600 flex items-center justify-center text-5xl"
+              >
+                💰
+              </div>
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-3">
+                  <h3 class="text-xl font-bold">Budget Tracker</h3>
+                  <span
+                    class="text-xs px-2 py-1 bg-yellow-600/20 text-yellow-400 rounded"
+                    >Đang làm</span
+                  >
+                </div>
+                <p class="text-sm text-gray-400 mb-4">
+                  Ứng dụng quản lý chi tiêu cá nhân với biểu đồ thống kê, phân
+                  loại thu chi.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="text-xs px-2 py-1 bg-cyan-600/20 text-cyan-400 rounded"
+                    >React</span
+                  >
+                  <span
+                    class="text-xs px-2 py-1 bg-green-600/20 text-green-400 rounded"
+                    >Node.js</span
+                  >
+                  <span
+                    class="text-xs px-2 py-1 bg-emerald-600/20 text-emerald-400 rounded"
+                    >MongoDB</span
+                  >
+                </div>
+                <div class="flex gap-3 text-sm">
+                  <a
+                    href="#"
+                    class="text-purple-400 hover:text-purple-300 flex items-center gap-1"
+                    >Demo</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-gray-300 flex items-center gap-1"
+                    >Code</a
+                  >
+                </div>
+              </div>
             </div>
-            <div class="p-6">
-              <div class="flex items-center gap-2 mb-3">
-                <h3 class="text-xl font-bold">Quiz Game</h3>
-                <span
-                  class="text-xs px-2 py-1 bg-green-600/20 text-green-400 rounded"
-                  >Hoàn thành</span
-                >
-              </div>
-              <p class="text-sm text-gray-400 mb-4">
-                Game trắc nghiệm với nhiều chủ đề khác nhau, có timer, điểm số
-                và bảng xếp hạng.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span
-                  class="text-xs px-2 py-1 bg-yellow-600/20 text-yellow-400 rounded"
-                  >JavaScript</span
-                >
-                <span
-                  class="text-xs px-2 py-1 bg-purple-600/20 text-purple-400 rounded"
-                  >CSS3</span
-                >
-                <span
-                  class="text-xs px-2 py-1 bg-orange-600/20 text-orange-400 rounded"
-                  >HTML5</span
-                >
-              </div>
-              <div class="flex gap-3 text-sm">
-                <a
-                  href="#"
-                  class="text-purple-400 hover:text-purple-300 flex items-center gap-1"
-                  >Demo</a
-                >
-                <a
-                  href="#"
-                  class="text-gray-400 hover:text-gray-300 flex items-center gap-1"
-                  >Code</a
-                >
-              </div>
-            </div>
-          </div>
 
-          <div
-            class="project-card bg-slate-800 rounded-2xl overflow-hidden card-hover glow-effect"
-          >
             <div
-              class="h-40 bg-gradient-to-br from-red-600 to-pink-600 flex items-center justify-center text-5xl"
+              class="project-card min-w-full sm:min-w-[50%] lg:min-w-[calc(100%/3)] bg-slate-800 rounded-2xl overflow-hidden card-hover glow-effect"
             >
-              🍕
+              <div
+                class="h-40 bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center text-5xl"
+              >
+                🎮
+              </div>
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-3">
+                  <h3 class="text-xl font-bold">Quiz Game</h3>
+                  <span
+                    class="text-xs px-2 py-1 bg-green-600/20 text-green-400 rounded"
+                    >Hoàn thành</span
+                  >
+                </div>
+                <p class="text-sm text-gray-400 mb-4">
+                  Game trắc nghiệm với nhiều chủ đề khác nhau, có timer, điểm số
+                  và bảng xếp hạng.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="text-xs px-2 py-1 bg-yellow-600/20 text-yellow-400 rounded"
+                    >JavaScript</span
+                  >
+                  <span
+                    class="text-xs px-2 py-1 bg-purple-600/20 text-purple-400 rounded"
+                    >CSS3</span
+                  >
+                  <span
+                    class="text-xs px-2 py-1 bg-orange-600/20 text-orange-400 rounded"
+                    >HTML5</span
+                  >
+                </div>
+                <div class="flex gap-3 text-sm">
+                  <a
+                    href="#"
+                    class="text-purple-400 hover:text-purple-300 flex items-center gap-1"
+                    >Demo</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-gray-300 flex items-center gap-1"
+                    >Code</a
+                  >
+                </div>
+              </div>
             </div>
-            <div class="p-6">
-              <div class="flex items-center gap-2 mb-3">
-                <h3 class="text-xl font-bold">Restaurant Website</h3>
-                <span
-                  class="text-xs px-2 py-1 bg-green-600/20 text-green-400 rounded"
-                  >Hoàn thành</span
-                >
-              </div>
-              <p class="text-sm text-gray-400 mb-4">
-                Website nhà hàng với menu, đặt bàn online, gallery hình ảnh.
-                Responsive design.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span
-                  class="text-xs px-2 py-1 bg-orange-600/20 text-orange-400 rounded"
-                  >HTML5</span
-                >
-                <span
-                  class="text-xs px-2 py-1 bg-blue-600/20 text-blue-400 rounded"
-                  >CSS3</span
-                >
-                <span
-                  class="text-xs px-2 py-1 bg-yellow-600/20 text-yellow-400 rounded"
-                  >JavaScript</span
-                >
-              </div>
-              <div class="flex gap-3 text-sm">
-                <a
-                  href="#"
-                  class="text-purple-400 hover:text-purple-300 flex items-center gap-1"
-                  >Demo</a
-                >
-                <a
-                  href="#"
-                  class="text-gray-400 hover:text-gray-300 flex items-center gap-1"
-                  >Code</a
-                >
-              </div>
-            </div>
-          </div>
 
-          <div
-            class="project-card bg-slate-800 rounded-2xl overflow-hidden card-hover glow-effect"
-          >
             <div
-              class="h-40 bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center text-5xl"
+              class="project-card min-w-full sm:min-w-[50%] lg:min-w-[calc(100%/3)] bg-slate-800 rounded-2xl overflow-hidden card-hover glow-effect"
             >
-              📚
+              <div
+                class="h-40 bg-gradient-to-br from-red-600 to-pink-600 flex items-center justify-center text-5xl"
+              >
+                🍕
+              </div>
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-3">
+                  <h3 class="text-xl font-bold">Restaurant Website</h3>
+                  <span
+                    class="text-xs px-2 py-1 bg-green-600/20 text-green-400 rounded"
+                    >Hoàn thành</span
+                  >
+                </div>
+                <p class="text-sm text-gray-400 mb-4">
+                  Website nhà hàng với menu, đặt bàn online, gallery hình ảnh.
+                  Responsive design.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="text-xs px-2 py-1 bg-orange-600/20 text-orange-400 rounded"
+                    >HTML5</span
+                  >
+                  <span
+                    class="text-xs px-2 py-1 bg-blue-600/20 text-blue-400 rounded"
+                    >CSS3</span
+                  >
+                  <span
+                    class="text-xs px-2 py-1 bg-yellow-600/20 text-yellow-400 rounded"
+                    >JavaScript</span
+                  >
+                </div>
+                <div class="flex gap-3 text-sm">
+                  <a
+                    href="#"
+                    class="text-purple-400 hover:text-purple-300 flex items-center gap-1"
+                    >Demo</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-gray-300 flex items-center gap-1"
+                    >Code</a
+                  >
+                </div>
+              </div>
             </div>
-            <div class="p-6">
-              <div class="flex items-center gap-2 mb-3">
-                <h3 class="text-xl font-bold">Personal Blog</h3>
-                <span
-                  class="text-xs px-2 py-1 bg-green-600/20 text-green-400 rounded"
-                  >Hoàn thành</span
-                >
+
+            <div
+              class="project-card min-w-full sm:min-w-[50%] lg:min-w-[calc(100%/3)] bg-slate-800 rounded-2xl overflow-hidden card-hover glow-effect"
+            >
+              <div
+                class="h-40 bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center text-5xl"
+              >
+                📚
               </div>
-              <p class="text-sm text-gray-400 mb-4">
-                Blog cá nhân chia sẻ kiến thức lập trình với markdown support,
-                search, categories.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span
-                  class="text-xs px-2 py-1 bg-cyan-600/20 text-cyan-400 rounded"
-                  >React</span
-                >
-                <span
-                  class="text-xs px-2 py-1 bg-green-600/20 text-green-400 rounded"
-                  >Node.js</span
-                >
-                <span
-                  class="text-xs px-2 py-1 bg-purple-600/20 text-purple-400 rounded"
-                  >Markdown</span
-                >
-              </div>
-              <div class="flex gap-3 text-sm">
-                <a
-                  href="#"
-                  class="text-purple-400 hover:text-purple-300 flex items-center gap-1"
-                  >Demo</a
-                >
-                <a
-                  href="#"
-                  class="text-gray-400 hover:text-gray-300 flex items-center gap-1"
-                  >Code</a
-                >
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-3">
+                  <h3 class="text-xl font-bold">Personal Blog</h3>
+                  <span
+                    class="text-xs px-2 py-1 bg-green-600/20 text-green-400 rounded"
+                    >Hoàn thành</span
+                  >
+                </div>
+                <p class="text-sm text-gray-400 mb-4">
+                  Blog cá nhân chia sẻ kiến thức lập trình với markdown support,
+                  search, categories.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="text-xs px-2 py-1 bg-cyan-600/20 text-cyan-400 rounded"
+                    >React</span
+                  >
+                  <span
+                    class="text-xs px-2 py-1 bg-green-600/20 text-green-400 rounded"
+                    >Node.js</span
+                  >
+                  <span
+                    class="text-xs px-2 py-1 bg-purple-600/20 text-purple-400 rounded"
+                    >Markdown</span
+                  >
+                </div>
+                <div class="flex gap-3 text-sm">
+                  <a
+                    href="#"
+                    class="text-purple-400 hover:text-purple-300 flex items-center gap-1"
+                    >Demo</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-gray-300 flex items-center gap-1"
+                    >Code</a
+                  >
+                </div>
               </div>
             </div>
           </div>
