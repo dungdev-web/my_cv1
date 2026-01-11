@@ -12,6 +12,22 @@
       crossorigin="anonymous"
     ></script>
   </head>
+  <!-- Project Detail Modal -->
+  <div
+    id="projectModal"
+    class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50 p-4"
+  >
+    <div
+      class="bg-slate-900 max-w-2xl w-full rounded-2xl overflow-hidden relative animate-fadeIn"
+    >
+      <!--   -->
+
+      <div id="modalContent">
+        <!-- JS will inject content here -->
+      </div>
+    </div>
+  </div>
+
   <body class="bg-slate-950 text-white overflow-x-hidden">
     <!-- 3D Canvas -->
     <div id="canvas-container"></div>
@@ -25,26 +41,26 @@
           </div>
           <div class="hidden md:flex space-x-8">
             <a href="#home" class="nav-link hover:text-purple-400 transition"
-              >Trang chủ</a
+              >Home</a
             >
             <a href="#about" class="nav-link hover:text-purple-400 transition"
-              >Giới thiệu</a
+              >About</a
             >
             <a
               href="#education"
               class="nav-link hover:text-purple-400 transition"
-              >Học vấn</a
+              >Education</a
             >
             <a href="#skills" class="nav-link hover:text-purple-400 transition"
-              >Kỹ năng</a
+              >Skills</a
             >
             <a
               href="#projects"
               class="nav-link hover:text-purple-400 transition"
-              >Dự án</a
+              >Projects</a
             >
             <a href="#contact" class="nav-link hover:text-purple-400 transition"
-              >Liên hệ</a
+              >Contact</a
             >
           </div>
           <button id="menu-toggle" class="md:hidden text-white z-50">
@@ -143,35 +159,40 @@
         </div>
 
         <h1 class="text-4xl sm:text-6xl md:text-7xl font-black mb-4">
-          Xin chào, mình là <span class="gradient-text" id="type-text"></span
+          Hello, I'm <span class="gradient-text" id="type-text"></span
           ><span class="cursor">|</span>
         </h1>
+
         <p class="text-lg sm:text-xl md:text-2xl text-gray-400 mb-4">
-          Sinh viên đã tốt nghiệp ngành Công nghệ Thông tin
+          A graduate in Information Technology
         </p>
+
         <p
           class="text-base sm:text-lg text-gray-500 mb-8 max-w-2xl mx-auto px-4"
         >
-          Đam mê lập trình web và luôn háo hức học hỏi công nghệ mới. Tìm kiếm
-          cơ hội thực tập/intern để phát triển kỹ năng và đóng góp vào dự án
-          thực tế.
+          Passionate about web development and always eager to learn new
+          technologies. Looking for an internship opportunity to improve my
+          skills and contribute to real-world projects.
         </p>
+
         <div class="flex flex-col sm:flex-row justify-center gap-4 mb-8 px-4">
           <a
             href="#projects"
             class="px-6 sm:px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-semibold hover:shadow-xl hover:scale-105 transition"
           >
-            Xem dự án của mình
+            View My Projects
           </a>
+
           <a href="#contact">
             <button
               class="bubbles px-6 sm:px-8 py-3 font-semibold"
               style="width: 100%"
             >
-              <span class="text"> Liên hệ với mình</span>
+              <span class="text"> Contact Me</span>
             </button>
           </a>
         </div>
+
         <div class="flex justify-center gap-4 text-sm text-gray-400">
           <div class="flex items-center gap-2">
             <span><i class="fa-solid fa-envelope"></i></span>
@@ -192,37 +213,42 @@
     >
       <div class="max-w-6xl mx-auto">
         <h2 class="text-4xl sm:text-5xl font-black mb-12 text-center">
-          Giới Thiệu <span class="gradient-text">Bản Thân</span>
+          About <span class="gradient-text">Me</span>
         </h2>
+
         <div class="grid md:grid-cols-2 gap-8 items-center">
           <div class="space-y-6">
             <p class="text-base sm:text-lg text-gray-300 leading-relaxed">
-              Mình là sinh viên đã tốt nghiệp ngành CNTT tại Cao Đẳng FPT
-              Polytechnic. Trong quá trình học, mình đã tự học và thực hành
-              nhiều công nghệ web hiện đại thông qua các dự án cá nhân và học
-              tập.
+              I am a graduate in Information Technology from FPT Polytechnic
+              College. During my studies, I self-learned and practiced many
+              modern web technologies through personal and academic projects.
             </p>
+
             <p class="text-base sm:text-lg text-gray-300 leading-relaxed">
-              Mặc dù chưa có nhiều kinh nghiệm thực tế, nhưng mình có nền tảng
-              cơ bản về lập trình, khả năng học hỏi nhanh và tinh thần làm việc
-              nhóm tốt. Mình sẵn sàng làm việc chăm chỉ để đóng góp và phát
-              triển cùng công ty.
+              Although I do not have much real-world experience yet, I have a
+              solid foundation in programming, learn quickly, and work well in a
+              team. I am always ready to work hard, contribute, and grow
+              together with the company.
             </p>
+
             <div class="flex flex-wrap gap-4">
               <div class="bg-slate-800 px-4 py-2 rounded-lg card-hover">
                 <div class="text-2xl font-bold gradient-text">3.5/4.0</div>
                 <div class="text-sm text-gray-400">GPA</div>
               </div>
+
               <div class="bg-slate-800 px-4 py-2 rounded-lg card-hover">
                 <div class="text-2xl font-bold gradient-text">10+</div>
-                <div class="text-sm text-gray-400">Dự án</div>
+                <div class="text-sm text-gray-400">Projects</div>
               </div>
+
               <div class="bg-slate-800 px-4 py-2 rounded-lg card-hover">
                 <div class="text-2xl font-bold gradient-text">5+</div>
-                <div class="text-sm text-gray-400">Chứng chỉ</div>
+                <div class="text-sm text-gray-400">Certificates</div>
               </div>
             </div>
           </div>
+
           <div class="space-y-4">
             <div class="bg-slate-800 rounded-xl p-6 card-hover glow-effect">
               <div class="flex items-start gap-4">
@@ -230,34 +256,37 @@
                   <i class="fa-solid fa-circle-check"></i>
                 </div>
                 <div>
-                  <h3 class="text-lg font-bold mb-2">Mục tiêu nghề nghiệp</h3>
+                  <h3 class="text-lg font-bold mb-2">Career Goal</h3>
                   <p class="text-gray-400 text-sm">
-                    Trở thành Full-stack Developer chuyên nghiệp, đóng góp vào
-                    các dự án có ý nghĩa và không ngừng học hỏi công nghệ mới.
+                    To become a professional Full-stack Developer, contribute to
+                    meaningful projects, and continuously learn new
+                    technologies.
                   </p>
                 </div>
               </div>
             </div>
+
             <div class="bg-slate-800 rounded-xl p-6 card-hover glow-effect">
               <div class="flex items-start gap-4">
                 <div class="text-3xl"><i class="fa-solid fa-dumbbell"></i></div>
                 <div>
-                  <h3 class="text-lg font-bold mb-2">Điểm mạnh</h3>
+                  <h3 class="text-lg font-bold mb-2">Strengths</h3>
                   <p class="text-gray-400 text-sm">
-                    Học hỏi nhanh, chủ động tìm tòi, có khả năng làm việc nhóm
-                    tốt, kiên trì và có trách nhiệm với công việc.
+                    Fast learner, proactive, good team player, persistent, and
+                    responsible at work.
                   </p>
                 </div>
               </div>
             </div>
+
             <div class="bg-slate-800 rounded-xl p-6 card-hover glow-effect">
               <div class="flex items-start gap-4">
                 <div class="text-3xl"><i class="fa-solid fa-seedling"></i></div>
                 <div>
-                  <h3 class="text-lg font-bold mb-2">Sẵn sàng học hỏi</h3>
+                  <h3 class="text-lg font-bold mb-2">Always Learning</h3>
                   <p class="text-gray-400 text-sm">
-                    Luôn cởi mở với feedback, sẵn sàng học từ senior developers
-                    và áp dụng vào công việc thực tế.
+                    Open to feedback, willing to learn from senior developers,
+                    and apply knowledge to real-world projects.
                   </p>
                 </div>
               </div>
@@ -271,33 +300,38 @@
     <section id="education" class="py-20 sm:py-32 px-4 sm:px-6 lg:px-8">
       <div class="max-w-6xl mx-auto">
         <h2 class="text-4xl sm:text-5xl font-black mb-12 text-center">
-          Học Vấn & <span class="gradient-text">Hoạt động</span>
+          Education & <span class="gradient-text">Activities</span>
         </h2>
 
         <div class="grid md:grid-cols-2 gap-8 mb-12">
           <div>
             <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
               <span><i class="fa-solid fa-user-graduate"></i></span>
-              <span>Học vấn</span>
+              <span>Education</span>
             </h3>
+
             <div class="space-y-6">
               <div class="timeline-item">
                 <div class="bg-slate-800 rounded-xl p-6 glow-effect">
                   <div class="flex justify-between items-start mb-2">
-                    <h4 class="font-bold text-lg">Đại học ABC</h4>
+                    <h4 class="font-bold text-lg">ABC University</h4>
                     <span class="text-sm text-purple-400">2021 - 2025</span>
                   </div>
-                  <p class="text-gray-400 mb-2">Cử nhân Công nghệ Thông tin</p>
+                  <p class="text-gray-400 mb-2">
+                    Bachelor of Information Technology
+                  </p>
                   <p class="text-sm text-gray-500">GPA: 3.5/4.0</p>
                   <div class="mt-3 flex flex-wrap gap-2">
                     <span
                       class="text-xs px-2 py-1 bg-purple-600/20 text-purple-400 rounded"
-                      >Giải Nhì Hackathon 2024</span
                     >
+                      Second Prize - Hackathon 2024
+                    </span>
                     <span
                       class="text-xs px-2 py-1 bg-blue-600/20 text-blue-400 rounded"
-                      >Dean's List 3 học kỳ</span
                     >
+                      Dean's List (3 semesters)
+                    </span>
                   </div>
                 </div>
               </div>
@@ -305,8 +339,8 @@
               <div class="timeline-item">
                 <div class="bg-slate-800 rounded-xl p-6 glow-effect">
                   <div class="flex justify-between items-start mb-2">
-                    <h4 class="font-bold text-lg">Các khóa học online</h4>
-                    <span class="text-sm text-purple-400">2023 - Nay</span>
+                    <h4 class="font-bold text-lg">Online Courses</h4>
+                    <span class="text-sm text-purple-400">2023 - Present</span>
                   </div>
                   <ul class="text-sm text-gray-400 space-y-1">
                     <li>• The Complete Web Developer Bootcamp (Udemy)</li>
@@ -323,7 +357,7 @@
           <div>
             <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
               <span><i class="fa-solid fa-users"></i></span>
-              <span>Hoạt động trên trường</span>
+              <span>University Activities</span>
             </h3>
 
             <div class="grid gap-4">
@@ -337,12 +371,14 @@
                     <i class="fa-solid fa-laptop-code"></i>
                   </div>
                   <div class="flex-1">
-                    <h4 class="font-bold text-sm">Đồ án Web bán hàng</h4>
+                    <h4 class="font-bold text-sm">
+                      E-commerce Website Project
+                    </h4>
                     <p class="text-xs text-gray-400">
-                      Môn Lập trình Web • 2024
+                      Web Programming Course • 2024
                     </p>
                     <p class="text-xs text-gray-500">
-                      Xây dựng website bán hàng với React + Node.js + MySQL
+                      Built an e-commerce website using React + Node.js + MySQL
                     </p>
                   </div>
                 </div>
@@ -358,12 +394,13 @@
                     <i class="fa-solid fa-code"></i>
                   </div>
                   <div class="flex-1">
-                    <h4 class="font-bold text-sm">Đồ án React Frontend</h4>
+                    <h4 class="font-bold text-sm">React Frontend Project</h4>
                     <p class="text-xs text-gray-400">
-                      Môn Lập trình Frontend • 2024
+                      Frontend Development Course • 2024
                     </p>
                     <p class="text-xs text-gray-500">
-                      Làm website blog cá nhân, call API, responsive
+                      Built a personal blog website with API integration and
+                      responsive design
                     </p>
                   </div>
                 </div>
@@ -379,11 +416,11 @@
                     <i class="fa-solid fa-database"></i>
                   </div>
                   <div class="flex-1">
-                    <h4 class="font-bold text-sm">Đồ án Cơ sở dữ liệu</h4>
-                    <p class="text-xs text-gray-400">Môn CSDL • 2023</p>
+                    <h4 class="font-bold text-sm">Database Systems Project</h4>
+                    <p class="text-xs text-gray-400">Database Course • 2023</p>
                     <p class="text-xs text-gray-500">
-                      Thiết kế database, viết query, làm hệ thống quản lý sinh
-                      viên
+                      Designed the database, wrote SQL queries, and built a
+                      student management system
                     </p>
                   </div>
                 </div>
@@ -399,12 +436,13 @@
                     <i class="fa-solid fa-users"></i>
                   </div>
                   <div class="flex-1">
-                    <h4 class="font-bold text-sm">Làm việc nhóm đồ án</h4>
+                    <h4 class="font-bold text-sm">Team Projects</h4>
                     <p class="text-xs text-gray-400">
-                      Nhiều môn học • 2022–2024
+                      Multiple Courses • 2022–2024
                     </p>
                     <p class="text-xs text-gray-500">
-                      Phân chia task, teamwork, dùng GitHub để quản lý source
+                      Task assignment, teamwork, and source code management
+                      using GitHub
                     </p>
                   </div>
                 </div>
@@ -422,10 +460,11 @@
     >
       <div class="max-w-6xl mx-auto">
         <h2 class="text-4xl sm:text-5xl font-black mb-12 text-center">
-          Kỹ Năng <span class="gradient-text">Của Mình</span>
+          My <span class="gradient-text">Skills</span>
         </h2>
 
         <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <!-- Technical Skills -->
           <div>
             <h3 class="text-xl font-bold mb-6">
               <i class="fa-solid fa-laptop-code"></i> Technical Skills
@@ -434,7 +473,7 @@
               <div>
                 <div class="flex justify-between mb-2">
                   <span>HTML & CSS</span>
-                  <span class="text-purple-400">Thành thạo</span>
+                  <span class="text-purple-400">Advanced</span>
                 </div>
                 <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
                   <div
@@ -447,7 +486,7 @@
               <div>
                 <div class="flex justify-between mb-2">
                   <span>JavaScript</span>
-                  <span class="text-purple-400">Tốt</span>
+                  <span class="text-purple-400">Good</span>
                 </div>
                 <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
                   <div
@@ -460,7 +499,7 @@
               <div>
                 <div class="flex justify-between mb-2">
                   <span>React.js</span>
-                  <span class="text-purple-400">Trung bình</span>
+                  <span class="text-purple-400">Intermediate</span>
                 </div>
                 <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
                   <div
@@ -473,7 +512,7 @@
               <div>
                 <div class="flex justify-between mb-2">
                   <span>Node.js & Express</span>
-                  <span class="text-purple-400">Cơ bản</span>
+                  <span class="text-purple-400">Basic</span>
                 </div>
                 <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
                   <div
@@ -486,7 +525,7 @@
               <div>
                 <div class="flex justify-between mb-2">
                   <span>Git & GitHub</span>
-                  <span class="text-purple-400">Tốt</span>
+                  <span class="text-purple-400">Good</span>
                 </div>
                 <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
                   <div
@@ -498,6 +537,7 @@
             </div>
           </div>
 
+          <!-- Soft Skills -->
           <div>
             <h3 class="text-xl font-bold mb-6">
               <i class="fa-brands fa-audible"></i> Soft Skills
@@ -505,8 +545,8 @@
             <div class="space-y-4">
               <div>
                 <div class="flex justify-between mb-2">
-                  <span>Làm việc nhóm</span>
-                  <span class="text-blue-400">Tốt</span>
+                  <span>Teamwork</span>
+                  <span class="text-blue-400">Good</span>
                 </div>
                 <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
                   <div
@@ -518,8 +558,8 @@
 
               <div>
                 <div class="flex justify-between mb-2">
-                  <span>Giải quyết vấn đề</span>
-                  <span class="text-blue-400">Tốt</span>
+                  <span>Problem Solving</span>
+                  <span class="text-blue-400">Good</span>
                 </div>
                 <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
                   <div
@@ -531,8 +571,8 @@
 
               <div>
                 <div class="flex justify-between mb-2">
-                  <span>Tự học & nghiên cứu</span>
-                  <span class="text-blue-400">Rất tốt</span>
+                  <span>Self-learning & Research</span>
+                  <span class="text-blue-400">Very Good</span>
                 </div>
                 <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
                   <div
@@ -544,8 +584,8 @@
 
               <div>
                 <div class="flex justify-between mb-2">
-                  <span>Quản lý thời gian</span>
-                  <span class="text-blue-400">Tốt</span>
+                  <span>Time Management</span>
+                  <span class="text-blue-400">Good</span>
                 </div>
                 <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
                   <div
@@ -557,8 +597,8 @@
 
               <div>
                 <div class="flex justify-between mb-2">
-                  <span>Tiếng Anh</span>
-                  <span class="text-blue-400">Trung bình khá</span>
+                  <span>English</span>
+                  <span class="text-blue-400">Upper-Intermediate</span>
                 </div>
                 <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
                   <div
@@ -574,7 +614,7 @@
         <!-- Technology Badges -->
         <div>
           <h3 class="text-xl font-bold mb-6 text-center">
-            🛠️ Công nghệ đã sử dụng
+            🛠️ Technologies I Use
           </h3>
           <div class="flex flex-wrap justify-center gap-3">
             <span
@@ -634,12 +674,14 @@
     <section id="projects" class="py-20 sm:py-32 px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
         <h2 class="text-4xl sm:text-5xl font-black mb-6 text-center">
-          Dự Án <span class="gradient-text">Cá Nhân</span>
+          Personal <span class="gradient-text">Projects</span>
         </h2>
+
         <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
-          Các dự án học tập và cá nhân giúp mình rèn luyện kỹ năng lập trình và
-          áp dụng kiến thức đã học
+          These academic and personal projects help me practice my programming
+          skills and apply the knowledge I have learned.
         </p>
+
         <div class="flex justify-end gap-3 mb-6">
           <button
             id="projPrev"
@@ -659,8 +701,15 @@
           <div
             class="projects-track flex gap-0 sm:gap-5 transition-transform duration-500 ease-in-out"
           >
+            <!-- Todo App -->
             <div
               class="project-card min-w-full sm:min-w-[50%] lg:min-w-[calc(100%/3)] bg-slate-800 rounded-2xl overflow-hidden card-hover glow-effect"
+              data-title="Todo App"
+              data-status="Completed"
+              data-desc="A task management application with add, delete, edit features. Supports localStorage and responsive UI."
+              data-tech="HTML, CSS, JavaScript"
+              data-demo="https://your-demo-link.com"
+              data-code="https://github.com/your-repo"
             >
               <div
                 class="h-40 bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center text-5xl"
@@ -672,12 +721,13 @@
                   <h3 class="text-xl font-bold">Todo App</h3>
                   <span
                     class="text-xs px-2 py-1 bg-green-600/20 text-green-400 rounded"
-                    >Hoàn thành</span
                   >
+                    Completed
+                  </span>
                 </div>
                 <p class="text-sm text-gray-400 mb-4">
-                  Ứng dụng quản lý công việc với các tính năng thêm, xóa, sửa
-                  task. Responsive design và lưu trữ dữ liệu local.
+                  A task management application with add, delete, and edit
+                  features. Responsive design and local storage support.
                 </p>
                 <div class="flex flex-wrap gap-2 mb-4">
                   <span
@@ -708,8 +758,15 @@
               </div>
             </div>
 
+            <!-- Weather App -->
             <div
               class="project-card min-w-full sm:min-w-[50%] lg:min-w-[calc(100%/3)] bg-slate-800 rounded-2xl overflow-hidden card-hover glow-effect"
+              data-title="Weather App"
+              data-status="Completed"
+              data-desc="A task management application with add, delete, edit features. Supports localStorage and responsive UI."
+              data-tech="React, Tailwind, API"
+              data-demo="https://your-demo-link.com"
+              data-code="https://github.com/your-repo"
             >
               <div
                 class="h-40 bg-gradient-to-br from-pink-600 to-orange-600 flex items-center justify-center text-5xl"
@@ -721,12 +778,12 @@
                   <h3 class="text-xl font-bold">Weather App</h3>
                   <span
                     class="text-xs px-2 py-1 bg-green-600/20 text-green-400 rounded"
-                    >Hoàn thành</span
+                    >Completed</span
                   >
                 </div>
                 <p class="text-sm text-gray-400 mb-4">
-                  Ứng dụng xem thời tiết sử dụng API, hiển thị thông tin thời
-                  tiết chi tiết theo thành phố.
+                  A weather application using an API to display detailed weather
+                  information by city.
                 </p>
                 <div class="flex flex-wrap gap-2 mb-4">
                   <span
@@ -757,8 +814,16 @@
               </div>
             </div>
 
+            <!-- Budget Tracker -->
             <div
               class="project-card min-w-full sm:min-w-[50%] lg:min-w-[calc(100%/3)] bg-slate-800 rounded-2xl overflow-hidden card-hover glow-effect"
+              data-title="Budget Tracker"
+              data-status="In Progress"
+              data-desc="A personal finance management app with charts and
+                  income/expense categorization."
+              data-tech="React, Node.js, MongoDB"
+              data-demo="https://your-demo-link.com"
+              data-code="https://github.com/your-repo"
             >
               <div
                 class="h-40 bg-gradient-to-br from-green-600 to-teal-600 flex items-center justify-center text-5xl"
@@ -770,12 +835,12 @@
                   <h3 class="text-xl font-bold">Budget Tracker</h3>
                   <span
                     class="text-xs px-2 py-1 bg-yellow-600/20 text-yellow-400 rounded"
-                    >Đang làm</span
+                    >In Progress</span
                   >
                 </div>
                 <p class="text-sm text-gray-400 mb-4">
-                  Ứng dụng quản lý chi tiêu cá nhân với biểu đồ thống kê, phân
-                  loại thu chi.
+                  A personal finance management app with charts and
+                  income/expense categorization.
                 </p>
                 <div class="flex flex-wrap gap-2 mb-4">
                   <span
@@ -806,8 +871,16 @@
               </div>
             </div>
 
+            <!-- Quiz Game -->
             <div
               class="project-card min-w-full sm:min-w-[50%] lg:min-w-[calc(100%/3)] bg-slate-800 rounded-2xl overflow-hidden card-hover glow-effect"
+              data-title="Quiz Game"
+              data-status="Completed"
+              data-desc="A quiz game with multiple topics, timer, scoring system, and
+                  leaderboard."
+              data-tech="JavaScript, CSS3, HTML5"
+              data-demo="https://your-demo-link.com"
+              data-code="https://github.com/your-repo"
             >
               <div
                 class="h-40 bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center text-5xl"
@@ -819,12 +892,12 @@
                   <h3 class="text-xl font-bold">Quiz Game</h3>
                   <span
                     class="text-xs px-2 py-1 bg-green-600/20 text-green-400 rounded"
-                    >Hoàn thành</span
+                    >Completed</span
                   >
                 </div>
                 <p class="text-sm text-gray-400 mb-4">
-                  Game trắc nghiệm với nhiều chủ đề khác nhau, có timer, điểm số
-                  và bảng xếp hạng.
+                  A quiz game with multiple topics, timer, scoring system, and
+                  leaderboard.
                 </p>
                 <div class="flex flex-wrap gap-2 mb-4">
                   <span
@@ -855,8 +928,16 @@
               </div>
             </div>
 
+            <!-- Restaurant Website -->
             <div
               class="project-card min-w-full sm:min-w-[50%] lg:min-w-[calc(100%/3)] bg-slate-800 rounded-2xl overflow-hidden card-hover glow-effect"
+              data-title="Restaurant Website"
+              data-status="Completed"
+              data-desc="A restaurant website with menu, online reservation, and image
+                  gallery. Fully responsive design."
+              data-tech="React, Tailwind, MySQL"
+              data-demo="https://your-demo-link.com"
+              data-code="https://github.com/your-repo"
             >
               <div
                 class="h-40 bg-gradient-to-br from-red-600 to-pink-600 flex items-center justify-center text-5xl"
@@ -868,25 +949,25 @@
                   <h3 class="text-xl font-bold">Restaurant Website</h3>
                   <span
                     class="text-xs px-2 py-1 bg-green-600/20 text-green-400 rounded"
-                    >Hoàn thành</span
+                    >Completed</span
                   >
                 </div>
                 <p class="text-sm text-gray-400 mb-4">
-                  Website nhà hàng với menu, đặt bàn online, gallery hình ảnh.
-                  Responsive design.
+                  A restaurant website with menu, online reservation, and image
+                  gallery. Fully responsive design.
                 </p>
                 <div class="flex flex-wrap gap-2 mb-4">
                   <span
                     class="text-xs px-2 py-1 bg-orange-600/20 text-orange-400 rounded"
-                    >HTML5</span
+                    >React</span
                   >
                   <span
                     class="text-xs px-2 py-1 bg-blue-600/20 text-blue-400 rounded"
-                    >CSS3</span
+                    >Tailwind</span
                   >
                   <span
                     class="text-xs px-2 py-1 bg-yellow-600/20 text-yellow-400 rounded"
-                    >JavaScript</span
+                    >MySQL</span
                   >
                 </div>
                 <div class="flex gap-3 text-sm">
@@ -904,8 +985,16 @@
               </div>
             </div>
 
+            <!-- Personal Blog -->
             <div
               class="project-card min-w-full sm:min-w-[50%] lg:min-w-[calc(100%/3)] bg-slate-800 rounded-2xl overflow-hidden card-hover glow-effect"
+              data-title="Personal Blog"
+              data-status="Completed"
+              data-desc="A personal blog for sharing programming knowledge with
+                  markdown support, search, and categories."
+              data-tech="React, Node.js, Markdown,..."
+              data-demo="https://your-demo-link.com"
+              data-code="https://github.com/your-repo"
             >
               <div
                 class="h-40 bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center text-5xl"
@@ -917,12 +1006,12 @@
                   <h3 class="text-xl font-bold">Personal Blog</h3>
                   <span
                     class="text-xs px-2 py-1 bg-green-600/20 text-green-400 rounded"
-                    >Hoàn thành</span
+                    >Completed</span
                   >
                 </div>
                 <p class="text-sm text-gray-400 mb-4">
-                  Blog cá nhân chia sẻ kiến thức lập trình với markdown support,
-                  search, categories.
+                  A personal blog for sharing programming knowledge with
+                  markdown support, search, and categories.
                 </p>
                 <div class="flex flex-wrap gap-2 mb-4">
                   <span
@@ -964,11 +1053,11 @@
     >
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-4xl sm:text-5xl font-black mb-6">
-          Liên Hệ <span class="gradient-text">Với Mình</span>
+          Get In <span class="gradient-text">Touch</span>
         </h2>
         <p class="text-base sm:text-lg text-gray-400 mb-12 px-4">
-          Mình rất mong được cơ hội làm việc và học hỏi từ quý công ty. Hãy liên
-          hệ với mình qua các kênh dưới đây!
+          I’m always excited to have opportunities to work, learn, and grow with
+          your company. Feel free to reach out to me through the channels below!
         </p>
 
         <div class="grid sm:grid-cols-2 gap-6 mb-12 px-4">
@@ -990,7 +1079,7 @@
             <div class="text-4xl mb-4 group-hover:scale-110 transition">
               <i class="fa-solid fa-phone"></i>
             </div>
-            <h3 class="text-lg font-bold mb-2">Điện thoại</h3>
+            <h3 class="text-lg font-bold mb-2">Phone</h3>
             <p class="text-sm text-purple-400">+84 775 895 973</p>
           </a>
 
@@ -1022,11 +1111,11 @@
             <i class="fa-solid fa-file"></i> Download CV
           </h3>
           <p class="text-gray-400 mb-6">
-            Tải CV của mình để xem chi tiết kinh nghiệm và kỹ năng
+            Download my CV to see more details about my experience and skills.
           </p>
           <!-- From Uiverse.io by vinodjangid07 -->
           <div class="inline-flex items-center gap-3">
-            <span>Tải CV (PDF)</span>
+            <span>Download CV (PDF)</span>
             <a class="Btn inline-flex items-center" href="cv1.pdf" download>
               <svg
                 class="svgIcon"
@@ -1096,8 +1185,8 @@
           <div>
             <h3 class="text-xl font-bold gradient-text mb-4">Lưu Đức Dũng</h3>
             <p class="text-sm text-gray-400 mb-4">
-              Sinh viên IT đam mê lập trình, luôn sẵn sàng học hỏi và phát
-              triển.
+              An IT student passionate about web development, always eager to
+              learn and grow.
             </p>
             <div class="flex gap-3">
               <a
@@ -1124,33 +1213,33 @@
           </div>
 
           <div>
-            <h4 class="font-bold mb-4">Liên kết nhanh</h4>
+            <h4 class="font-bold mb-4">Quick Links</h4>
             <ul class="space-y-2 text-sm text-gray-400">
               <li>
                 <a href="#home" class="hover:text-purple-400 transition"
-                  >Trang chủ</a
+                  >Home</a
                 >
               </li>
               <li>
                 <a href="#about" class="hover:text-purple-400 transition"
-                  >Giới thiệu</a
+                  >About</a
                 >
               </li>
               <li>
                 <a href="#education" class="hover:text-purple-400 transition"
-                  >Học vấn</a
+                  >Education</a
                 >
               </li>
               <li>
                 <a href="#projects" class="hover:text-purple-400 transition"
-                  >Dự án</a
+                  >Projects</a
                 >
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 class="font-bold mb-4">Kỹ năng chính</h4>
+            <h4 class="font-bold mb-4">Main Skills</h4>
             <ul class="space-y-2 text-sm text-gray-400">
               <li class="flex items-center gap-2">
                 <span class="text-purple-400">•</span>
@@ -1172,7 +1261,7 @@
           </div>
 
           <div>
-            <h4 class="font-bold mb-4">Liên hệ</h4>
+            <h4 class="font-bold mb-4">Contact</h4>
             <ul class="space-y-3 text-sm text-gray-400">
               <li class="flex items-center justify-start gap-2">
                 <span class="text-purple-400 mt-1"
@@ -1190,7 +1279,7 @@
                 <span class="text-purple-400 mt-1"
                   ><i class="fa-solid fa-location-dot"></i
                 ></span>
-                <span>TP. Hồ Chí Minh, Việt Nam</span>
+                <span>Ho Chi Minh City, Vietnam</span>
               </li>
             </ul>
           </div>
@@ -1201,7 +1290,7 @@
             class="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-400"
           >
             <p>
-              &copy; 2025 Lưu Đức Dũng. Được tạo với ❤️ và nhiều cốc cà phê
+              &copy; © 2025 Lưu Đức Dũng. Made with ❤️ & coffee ☕
               <i class="fa-solid fa-mug-saucer"></i>
             </p>
             <div class="flex gap-4">
@@ -1211,7 +1300,7 @@
               </span>
               <span class="flex items-center gap-1">
                 <span><i class="fa-solid fa-rocket"></i></span>
-                <span>Sẵn sàng làm việc</span>
+                <span>Ready to work</span>
               </span>
             </div>
           </div>

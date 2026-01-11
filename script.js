@@ -114,68 +114,148 @@ typeLoop();
 // back-to-top button
 const backToTopBtn = document.getElementById("backToTop");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      backToTopBtn.classList.add("show");
-    } else {
-      backToTopBtn.classList.remove("show");
-    }
-  });
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    backToTopBtn.classList.add("show");
+  } else {
+    backToTopBtn.classList.remove("show");
+  }
+});
 
-  backToTopBtn.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
+backToTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
   });
+});
 //   slider
- const track = document.querySelector(".projects-track");
-  const prevBtn = document.getElementById("projPrev");
-  const nextBtn = document.getElementById("projNext");
-  const cards = document.querySelectorAll(".project-card");
+const track = document.querySelector(".projects-track");
+const prevBtn = document.getElementById("projPrev");
+const nextBtn = document.getElementById("projNext");
+const cards = document.querySelectorAll(".project-card");
 
-  let index = 0;
+let index = 0;
 
-  function getVisibleCount() {
-    if (window.innerWidth >= 1024) return 3;
-    if (window.innerWidth >= 640) return 2;
-    return 1;
+function getVisibleCount() {
+  if (window.innerWidth >= 1024) return 3;
+  if (window.innerWidth >= 640) return 2;
+  return 1;
+}
+
+function updateSlider() {
+  const visible = getVisibleCount();
+  const cardWidth = cards[0].offsetWidth;
+  const moveX = index * cardWidth;
+  track.style.transform = `translateX(-${moveX}px)`;
+}
+
+nextBtn.addEventListener("click", () => {
+  const visible = getVisibleCount();
+  const maxIndex = cards.length - visible;
+
+  if (index >= maxIndex) {
+    index = 0; // quay lại đầu
+  } else {
+    index += visible;
   }
 
-  function updateSlider() {
-    const visible = getVisibleCount();
-    const cardWidth = cards[0].offsetWidth;
-    const moveX = index * cardWidth;
-    track.style.transform = `translateX(-${moveX}px)`;
+  updateSlider();
+});
+
+prevBtn.addEventListener("click", () => {
+  const visible = getVisibleCount();
+  const maxIndex = cards.length - visible;
+
+  if (index <= 0) {
+    index = maxIndex; // nhảy về cuối
+  } else {
+    index -= visible;
   }
 
-  nextBtn.addEventListener("click", () => {
-    const visible = getVisibleCount();
-    const maxIndex = cards.length - visible;
+  updateSlider();
+});
 
-    if (index >= maxIndex) {
-      index = 0; // quay lại đầu
+window.addEventListener("resize", updateSlider);
+setInterval(() => {
+  nextBtn.click();
+}, 4500);
+
+// Project modal popup
+const modal = document.getElementById("projectModal");
+const modalContent = document.getElementById("modalContent");
+const closeModal = document.getElementById("closeModal");
+
+document.querySelectorAll(".project-card").forEach((card) => {
+  card.addEventListener("click", () => {
+    const title = card.dataset.title;
+    const status = card.dataset.status;
+    const desc = card.dataset.desc;
+    const tech = card.dataset.tech;
+    const demo = card.dataset.demo;
+    const code = card.dataset.code;
+    let statusClass = "";
+    let statusDotClass = "";
+
+    if (status === "Completed") {
+      statusClass = "bg-green-600/20 text-green-400";
+      statusDotClass = "status-completed";
+    } else if (status === "In Progress") {
+      statusClass = "bg-yellow-600/20 text-yellow-400";
+      statusDotClass = "status-progress";
     } else {
-      index += visible;
+      statusClass = "bg-gray-600/20 text-gray-400";
+      statusDotClass = "status-pending";
     }
 
-    updateSlider();
+    modalContent.innerHTML = `
+        <div class="popup-overlay">
+    <div class="popup-container">
+      <button class="close-btn" id="closeModal">×</button>
+      
+      <div class="popup-content">
+        <h2 class="project-title">${title}</h2>
+        
+        <span class="status-badge ${statusClass} ${statusDotClass}">${status}</span>
+        
+        <p class="project-description">
+          ${desc}
+        </p>
+        
+        <div class="tech-section">
+          <h4 class="tech-title">Technologies</h4>
+          <p class="tech-list">${tech}</p>
+        </div>
+        
+        <div class="button-group">
+          <a href="${demo}" class="btn btn-primary">
+            <span>🔗</span>
+            <span>Live Demo</span>
+          </a>
+          <a href="${code}" class="btn btn-secondary">
+            <span>💻</span>
+            <span>Source Code</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+      `;
+
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+    document.getElementById("closeModal").addEventListener("click", close);
   });
+});
 
-  prevBtn.addEventListener("click", () => {
-    const visible = getVisibleCount();
-    const maxIndex = cards.length - visible;
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) close();
+});
 
-    if (index <= 0) {
-      index = maxIndex; // nhảy về cuối
-    } else {
-      index -= visible;
-    }
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") close();
+});
 
-    updateSlider();
-  });
-
-  window.addEventListener("resize", updateSlider);
-   setInterval(() => {
-    nextBtn.click();
-  }, 4500);
+function close() {
+  modal.classList.add("hidden");
+  modal.classList.remove("flex");
+}
