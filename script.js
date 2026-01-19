@@ -196,10 +196,10 @@ document.querySelectorAll(".project-card").forEach((card) => {
     let statusClass = "";
     let statusDotClass = "";
 
-    if (status === "Hoàn thành") {
+    if (status === "Hoàn thành" || status === "Completed") {
       statusClass = "bg-green-600/20 text-green-400";
-      statusDotClass = "status-Hoàn thành";
-    } else if (status === "Đang làm") {
+      statusDotClass = "status-completed";
+    } else if (status === "Đang làm" || status === "In Progress") {
       statusClass = "bg-yellow-600/20 text-yellow-400";
       statusDotClass = "status-progress";
     } else {
